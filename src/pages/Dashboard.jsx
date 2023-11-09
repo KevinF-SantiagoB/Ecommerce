@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getMeUserService } from '@/services/userServices'
+import '@/styles/dash.css'
 
 const Dashboard = () => {
   const [userData, setUserData] = useState({})
@@ -21,7 +22,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <h1>Dashboard</h1>
+      <h1 className="text-3xl font-bold text-teal-500 underline text-center">Dashboard</h1>
       {userData?.first_name && <h2>First Name: {userData.first_name}</h2>}
       {userData?.last_name && <h2>Last Name: {userData.last_name}</h2>}
       {userData?.gender && <h2>Gender: {userData.gender}</h2>}
